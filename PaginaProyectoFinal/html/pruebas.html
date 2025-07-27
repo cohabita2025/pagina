@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir y Ver Imagen</title>
+    <style>
+        /* Estilo general para la página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+
+        /* Contenedor central */
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+        }
+
+        /* Estilo para el input de archivo */
+        input[type="file"] {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Estilo para la imagen cargada */
+        #imagenContenedor {
+            margin-top: 20px;
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #imagenMostrar {
+            max-width: 100%;
+            max-height: 300px;
+            border-radius: 10px;
+        }
+
+        /* Estilo para el mensaje */
+        #mensaje {
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sube una Imagen / GPT</h2>
+
+        <!-- Input para seleccionar la imagen -->
+        <input type="file" id="inputImagen" accept="image/*">
+
+        <!-- Espacio donde se mostrará la imagen -->
+        <div id="imagenContenedor">
+            <img id="imagenMostrar" src="" alt="Imagen seleccionada" style="display: none;">
+        </div>
+
+        <p id="mensaje">Selecciona una imagen para mostrarla aquí.</p>
+    </div>
+
+    <script>
+        // Escuchar el evento de cambio cuando el usuario selecciona una imagen
+        document.getElementById('inputImagen').addEventListener('change', function(event) {
+            const archivo = event.target.files[0];  // Obtenemos el primer archivo seleccionado
+
+            if (archivo) {
+                // Creamos una URL temporal para la imagen seleccionada
+                const imgElement = document.getElementById('imagenMostrar');
+                imgElement.src = URL.createObjectURL(archivo);  // Asignamos la URL del archivo
+
+                // Mostramos la imagen
+                imgElement.style.display = 'block';
+
+                // Ocultamos el mensaje y mostramos la imagen
+                document.getElementById('mensaje').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

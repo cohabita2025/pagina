@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/solicitud-de-registro.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" class="pagina">
+        <div class="registro-datos-sesion-titular">
+            <header>
+                <div class="logotipo">
+                    <a href="/html/index.html">
+                        <img src="" alt="">
+                    </a>
+                </div>
+
+                <div class="titulo">
+                    <p>registro titular</p>
+                </div>
+            </header>
+
+            <div class="datos">
+                <div class="dato">
+                    <input type="text" name="cedula" id="cedula-titular" placeholder="cedula" required>
+                </div>
+
+                <div class="dato">
+                    <div class="mostrar-contrasenia">
+                        <button type="button" onclick="cambiarInput('contrasenia-titular')" id="mostrar-repetir-contrasenia-boton">
+                            <img src="" alt="">
+                        </button>
+                    </div>
+                    <input type="password" placeholder="contraseña" name="contrasenia" id="contrasenia-titular" required>
+                </div>
+
+                <div class="dato">
+                    <div class="mostrar-contrasenia">
+                        <button type="button" onclick="cambiarInput('repetir-contrasenia-titular')" id="mostrar-contrasenia-boton">
+                            <img src="" alt="">
+                        </button>
+                    </div>
+                    <input type="password" placeholder="repetir contraseña" name="repetir-contrasenia" id="repetir-contrasenia-titular" required>
+                </div>
+
+                <button type="submit" class="boton-enviar">
+                    <p>registrar datos</p>
+                </button>
+            </div>
+        </div>
+
+        <div class="ingreso-familiares">
+            <div class="titulo-familiares">
+                <p></p>
+            </div>
+            <div class="familiares">
+
+                <div class="familiar" id="familiar1">
+                    <div class="informacion">
+                        <div class="informacion-basica">
+
+                            <div class="foto">
+                                <img src="" alt="">
+                            </div>
+                            <div class="nombre">
+                                <p></p>
+                            </div>
+                            <div class="boton-borrar">
+                                <button type="button" onclick="eliminarFamiliar('familiar1')"></button>
+                            </div>
+
+                        </div>
+                        <div class="informacion-detallada">
+                            <div class="foto">
+                                <img src="" alt="">
+                                <input type="file" name="foto-familiar" class="foto-familiar">
+                            </div>
+                            <div class="datos">
+                                <input type="text" name="nombre" class="dato nombre" placeholder="hombre" >
+                                <input type="text" name="primer-apellido" class="dato primer-apellido" placeholder="primer-apellido" >
+                                <input type="text" name="segundo-apellido" class="dato segundo-apellido" placeholder="segundo-apellido">
+
+                                <input type="text" name="cedula" class="dato cedula" placeholder="cedula" required>
+                                <input type="date" name="fecha-nacimiento" class="dato fecha-nacimiento" >
+
+                                <input type="email" name="gmail" class="dato email" placeholder="gmail@example.com">
+                                <input type="text" name="telefono" class="dato telefono" placeholder="telefono">
+
+
+                                <select name="rol-ante-titular" class="dato rol-ante-titular"  >
+                                    <option value="" disabled selected>rol</option>
+                                    <option value="madre">madre</option>
+                                    <option value="padre">padre</option>
+                                    <option value="hijo/a">hijo/a</option>
+                                    <option value="sobrino/a">sobrino/a</option>
+                                    <option value="tio/a">tio/a</option>
+                                </select>
+
+                                <select name="" id="" class="dato genero">
+                                    <option value="" disabled selected>genero</option>
+                                    <option value="hombre">hombre</option>
+                                    <option value="mujer">mujer</option>
+                                </select>
+
+                                <input type="file" name="copia-cedula" class="dato copia-cedula">
+                                <input type="file" name="comprobante-ingresos" class="dato copia-cedula">
+                                <input type="file" name="declaracion-no-vivienda" class="dato declaracion-no-vivienda">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desplegar">
+                        <button onclick="desplegar('familiar1')" id="desplegar-familiar" class="boton-desplegar" type="button">
+                            <p>desplegar</p>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="agregar-familiar">
+                    <button onclick="agregarFamiliar()" class="boton" type="button">
+                        <p>agregar familiar</p>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </form>
+    <script src="/js/solicitud-de-registro.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+:root {
+  --px: 0.1326vh; 
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagina{
+    height: 100vh;
+    width:177.78vh;
+    background-color: #FFFAF2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.inicio-sesion , .registro{
+    position: relative;
+    width:calc(var(--px) * 300);
+    height: calc(var(--px) * 593);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+
+.titulo , .ingresar , .contrasenia , .enviar , .olvide-mi-contrasenia , header{
+    background-color: #E8A333;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    width:calc(var(--px) * 284);
+    height: calc(var(--px) * 135);
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--px) * 8);
+    padding: calc(var(--px) * 8);
+}
+
+.logotipo{
+    width:calc(var(--px) * 268);
+    height: calc(var(--px) * 74);
+    background-color: #3372E8;
+    padding: calc(var(--px) * 4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    all: unset;
+    background-color: #8AAEF1;
+    width: 100%;
+    height: 100%;
+}
+
+.olvide-mi-contrasenia{
+    width:calc(var(--px) * 300);
+    height: calc(var(--px) * 30);
+    padding: calc(var(--px) * 8);
+
+}
+
+.olvide-mi-contrasenia a{
+    background-color: #FFECCD;
+    width:calc(var(--px) * 284);
+    height: calc(var(--px) * 14);
+}
+
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(var(--px) * 45);
+    padding: calc(var(--px) * 8);
+    margin-bottom: calc(var(--px) * 29);
+}
+
+.ingresar , .contrasenia{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: calc(var(--px) * 8);
+    height:calc(var(--px) * 45);
+    width: calc(var(--px) * 300);
+}
+
+form input,button{
+    all: unset;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.enviar{
+    width: calc(var(--px) * 160);
+    height: calc(var(--px) * 55);
+    padding: calc(var(--px) * 8);
+}
+
+.enviar button:hover{
+    cursor: pointer;
+}
+
+.titulo{
+    width:  calc(var(--px) * 268);
+    height:  calc(var(--px) * 29);
+    padding:  calc(var(--px) * 8);
+    background-color: #FACF89;
+    margin-top: calc(var(--px) * 8);
+}
+
+.olvide-mi-contrasenia a{
+    display: inline-block;
+    width: calc(var(--px) * 284);
+    height: calc(var(--px) * 14);
+    background-color: #FACF89;
+}
+
+.mostrar-contrasenia{
+    position: absolute;
+    right: calc(var(--px) * 12);
+    top: calc(var(--px) * 10);
+    width: calc(var(--px) * 25);
+    height: calc(var(--px) * 25);
+    background-color:#3372E8;
+    padding: calc(var(--px) * 2);
+}
+
+.mostrar-contrasenia button{
+    width: 100%;
+    height: 100%;
+    background-color: #8AAEF2;
+}
+
+.mostrar-contrasenia button img{
+    width: 100%;
+    height: 100%;
+}
+
+button:hover{
+    cursor: pointer;
+}
